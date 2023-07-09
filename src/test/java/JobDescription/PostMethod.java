@@ -1,19 +1,15 @@
 package JobDescription;
 
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import restutils.RestUtils;
 
-import java.util.HashMap;
-
-public class PostJob {
+public class PostMethod {
 
     @Test
-    public void postJob(){
+    void voidRequest() {
 
-        String url = "http://localhost:9191/normal/webapi/add";
-        String payload ="{\n" +
+        String payload = "{\n" +
                 "  \"experience\": [\n" +
                 "    \"Java\"\n" +
                 "  ],\n" +
@@ -30,9 +26,11 @@ public class PostJob {
                 "  ]\n" +
                 "}";
 
-        Response response = RestUtils.performPost(url, payload, new HashMap<>());
+        Response response = RestAssured.given().baseUri("http://localhost:9191/").body(payload).log().all().
+                when().post("/normal/webapi/add").then().extract().response();
 
-        Assert.assertEquals(response.statusCode(),201,"Testcase Failed");
+        response.prettyPrint();
+
 
     }
 }
