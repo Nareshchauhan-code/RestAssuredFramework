@@ -14,7 +14,7 @@ public class PostMethod {
                 "    \"Java\"\n" +
                 "  ],\n" +
                 "  \"jobDescription\": \"Testing\",\n" +
-                "  \"jobId\": 12,\n" +
+                "  \"jobId\": 15,\n" +
                 "  \"jobTitle\": \"QA\",\n" +
                 "  \"project\": [\n" +
                 "    {\n" +
