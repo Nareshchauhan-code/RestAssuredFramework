@@ -3,7 +3,7 @@ package JobDescription;
 import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
-public class MockAPI {
+public class MockAPIResponseValidation {
 
     @Test
     void mockAPI() {
