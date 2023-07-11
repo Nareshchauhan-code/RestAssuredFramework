@@ -10,7 +10,7 @@ public class MockAPI {
 
 
         JsonPath jsonPath = new JsonPath(PayloadForDemo.payload());
-       // Print the courses count
+        // Print the courses count
         int count = jsonPath.getInt("courses.size()");
         System.out.println(count);
 
@@ -21,6 +21,16 @@ public class MockAPI {
         // First course print
         String course = jsonPath.getString("courses[0].title");
         System.out.println(course);
+
+        // Print the course Title
+
+        for (int i = 0; i < count; i++) {
+
+            String courseTitle = jsonPath.getString("courses[" + i + "].title");
+            System.out.println(courseTitle);
+
+
+        }
 
     }
 
