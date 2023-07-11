@@ -32,6 +32,25 @@ public class MockAPI {
 
         }
 
+        // Print RPA copies sold
+
+        for (int i = 0; i < count; i++) {
+
+            String courseTitle = jsonPath.getString("courses[" + i + "].title");
+
+            if (courseTitle.equalsIgnoreCase("RPA")) {
+
+                int rpacopies = jsonPath.getInt("courses[" + i + "].copies");
+
+                System.out.println("RPA " + rpacopies + " copies Sold");
+                break;
+
+            }
+
+
+        }
+
+
     }
 
 
