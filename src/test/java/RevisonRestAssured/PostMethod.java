@@ -13,11 +13,16 @@ public class PostMethod {
     void postMethod() {
 
         RequestSpecification requestSpecification = RestAssured.given();
+        //Given
         requestSpecification.baseUri("http://localhost:9191");
         requestSpecification.basePath("/normal/webapi/add");
         requestSpecification.header("Content-Type", "application/json");
         requestSpecification.body(new File("src/test/resources/postData.json"));
-        Response response = requestSpecification.post();
+
+        //When
+        Response response = requestSpecification.when().post();
+
+        //Then
         response.then().statusCode(201);
         response.prettyPrint();
 
