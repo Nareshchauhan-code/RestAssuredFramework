@@ -3,7 +3,7 @@ package JobDescription;
 import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
-public class MockAPI {
+public class MockAPIResponseValidation {
 
     @Test
     void mockAPI() {
@@ -32,7 +32,7 @@ public class MockAPI {
 
         }
 
-        // Print RPA copies sold
+        // Print RPA copies sold and Print..
 
         for (int i = 0; i < count; i++) {
 
