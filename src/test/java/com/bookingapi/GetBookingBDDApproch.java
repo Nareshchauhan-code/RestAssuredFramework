@@ -1,7 +1,6 @@
 package com.bookingapi;
-
-import io.restassured.RestAssured;
 import org.testng.annotations.Test;
+import static io.restassured.RestAssured.given;
 
 public class GetBookingBDDApproch {
 
@@ -9,13 +8,13 @@ public class GetBookingBDDApproch {
     void getBooking() {
 
         // Build the Request
-        RestAssured.given().
+        given().
                 baseUri("https://restful-booker.herokuapp.com")
                 .basePath("/booking/{id}")
                 .pathParams("id", 1).log().all()
 
                 // Hit the Request and get the Response
-                .get()
+                .when().get()
                 // Validate the Response
                 .then().log().all()
                 .statusCode(200)
