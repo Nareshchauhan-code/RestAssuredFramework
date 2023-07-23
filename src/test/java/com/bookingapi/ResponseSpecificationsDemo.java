@@ -4,7 +4,6 @@ import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.hamcrest.Matchers;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -38,14 +37,12 @@ public class ResponseSpecificationsDemo {
     @Test(priority = 1)
     void postRequest() {
 
-        RestAssured.given().spec(requestSpecification).
+        RestAssured.given(requestSpecification).
                 body("{\"firstname\":\"Jim\",\"lastname\":\"Brown\",\"totalprice\":111,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2018-01-01\",\"checkout\":\"2019-01-01\"},\"additionalneeds\":\"Breakfast\"}")
                 .when()
                 .get()
                 .then().spec(responseSpecification);
 
-
     }
-
 
 }
