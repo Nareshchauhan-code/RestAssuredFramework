@@ -5,28 +5,26 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class PATCHRequest {
+public class DeleteRequest {
 
     @Test(priority = 1)
-    void patchRequest() {
+    void deleteRequest() {
 
         RestAssured
                 .given()
                 .baseUri("https://restful-booker.herokuapp.com")
-                .basePath("booking/1")
+                .basePath("/booking/1")
                 .header("Authorization", "Basic YWRtaW46cGFzc3dvcmQxMjM=")
-                .header("Content-Type", "application/json")
-                .header("Accept", "application/json")
-                .body("{\"firstname\":\"Naresh\",\"lastname\":\"Brown\"}")
                 .log().all()
                 .when()
-                .patch()
+                .delete()
                 .then()
                 .assertThat()
-                .statusCode(200)
+                .statusCode(201)
                 .extract()
                 .response()
                 .prettyPrint();
+
 
     }
 

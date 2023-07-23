@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class ReqRes {
+public class GetRequest {
 
     @Test
     void reqresGet() {
