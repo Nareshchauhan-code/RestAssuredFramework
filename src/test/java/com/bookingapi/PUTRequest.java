@@ -11,7 +11,7 @@ public class PUTRequest {
     @Test
     void putRequest() {
 
-        HashMap<String, String> mapHeader = new HashMap<String, String>();
+        HashMap<String, Object> mapHeader = new HashMap<String, Object>();
         mapHeader.put("Content-Type", "application/json");
         mapHeader.put("Accept", "application/json");
         mapHeader.put("Authorization", "Basic YWRtaW46cGFzc3dvcmQxMjM=");
@@ -23,6 +23,7 @@ public class PUTRequest {
                 .when()
                 .put()
                 .then()
+                .statusCode(200)
                 .extract()
                 .response()
                 .prettyPrint();
