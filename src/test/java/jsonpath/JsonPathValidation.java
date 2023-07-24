@@ -18,5 +18,7 @@ public class JsonPathValidation {
         //System.out.println(jsonPath.prettyPrint());
 
         System.out.println(jsonPath.getString("lastname"));
+
+        System.out.println(jsonPath.getMap("$"));
     }
 }
