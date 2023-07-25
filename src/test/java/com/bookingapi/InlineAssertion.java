@@ -1,10 +1,7 @@
 package com.bookingapi;
-
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import org.hamcrest.Matchers;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class InlineAssertion {
@@ -23,7 +20,6 @@ public class InlineAssertion {
                 .log().all()
                 .body("token", Matchers.notNullValue())
                 .body("token.length()", Matchers.greaterThan(10));
-
 
     }
 }
