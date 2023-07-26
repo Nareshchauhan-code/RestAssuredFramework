@@ -46,7 +46,6 @@ public class CreateComplexRequestUsingMapandList {
         finalPayload.put("location", "Cityville");
         finalPayload.put("contactEmail", "contact@techhub.com");
 
-
         Map<String, Object> categoryOne = new LinkedHashMap<String, Object>();
         categoryOne.put("categoryId", 1);
         categoryOne.put("categoryName", "Laptops");
