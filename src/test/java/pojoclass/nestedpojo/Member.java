@@ -1,11 +1,22 @@
 package pojoclass.nestedpojo;
 
+import java.util.List;
+
 public class Member {
 
     private String first_Name;
     private String last_name;
     private String email;
     private String gender;
+    private List<Address> address;
+
+    public List<Address> getAddress() {
+        return address;
+    }
+
+    public void setAddress(List<Address> address) {
+        this.address = address;
+    }
 
     public String getFirst_Name() {
         return first_Name;
@@ -38,16 +49,6 @@ public class Member {
     public void setGender(String gender) {
         this.gender = gender;
     }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    private Address address;
 
 
 }
