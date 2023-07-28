@@ -1,4 +1,4 @@
-package pojoclass;
+package JobDescription.pojoclass;
 
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;

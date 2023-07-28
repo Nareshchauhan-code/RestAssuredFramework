@@ -1,21 +1,29 @@
-package pojoclass.nestedpojo;
+package JobDescription.pojoclass;
 
-import java.util.List;
+public class Student {
 
-public class Member {
 
     private String first_Name;
     private String last_name;
     private String email;
     private String gender;
-    private List<Address> address;
+    private int account_number;
+    private double amount;
 
-    public List<Address> getAddress() {
-        return address;
+    public int getAccount_number() {
+        return account_number;
     }
 
-    public void setAddress(List<Address> address) {
-        this.address = address;
+    public void setAccount_number(int account_number) {
+        this.account_number = account_number;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
     public String getFirst_Name() {

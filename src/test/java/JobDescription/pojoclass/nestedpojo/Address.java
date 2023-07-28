@@ -1,4 +1,4 @@
-package pojoclass.nestedpojo;
+package JobDescription.pojoclass.nestedpojo;
 
 public class Address {
 

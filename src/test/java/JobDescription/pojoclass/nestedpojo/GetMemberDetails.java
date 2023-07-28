@@ -1,4 +1,4 @@
-package pojoclass.nestedpojo;
+package JobDescription.pojoclass.nestedpojo;
 
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
