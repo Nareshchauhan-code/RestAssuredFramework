@@ -8,17 +8,11 @@ public class ConvertJSONObjectResponseToPOJO {
     @Test
     public void covertJsonObjectToPojo() {
 
-        BookingPojo ob = new BookingPojo();
-        ob.setJob("IT");
-        ob.setName("Naresh");
+        BookingPojo bookingPojo = RestAssured.get("https://run.mocky.io/v3/321140d1-3943-4bd0-a35d-e258462f8191")
+                .as(BookingPojo.class);
 
-        RestAssured.given()
-                .body(ob)
-                .log().all()
-                .post();
-
-        //System.out.println(bookingPojo.getJob());
-        //System.out.println(bookingPojo.getName());
+        System.out.println(bookingPojo.getJob());
+        System.out.println(bookingPojo.getName());
 
 
     }
