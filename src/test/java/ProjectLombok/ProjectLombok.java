@@ -1,6 +1,5 @@
 package ProjectLombok;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package pojoclass.PayloadCreation;
+package PayloadCreation;
 
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
