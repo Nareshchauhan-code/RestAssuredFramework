@@ -1,4 +1,4 @@
-package PayloadCreation;
+package pojoclass.PayloadCreation;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
