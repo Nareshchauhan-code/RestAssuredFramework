@@ -1,9 +1,9 @@
 package jacksonlibrary;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class CustomerPojo {
+@JsonIncludeProperties(value = {"firstname","lastname"})
+public class CustomerPojoForJsonAnotation {
 
     private String firstname;
     private String lastname;
@@ -42,6 +42,7 @@ public class CustomerPojo {
     public void setDepositpaid(boolean depositpaid) {
         this.depositpaid = depositpaid;
     }
+
 
 
 }

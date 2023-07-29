@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.IOException;
 
-public class CustDataReadFromJson {
+public class ReadDataOfCustomerJson {
 
     @Test
     public void covertJsontoPojo() throws IOException {
