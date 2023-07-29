@@ -1,5 +1,8 @@
 package jacksonlibrary;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
 public class CustomerPojo {
 
     private String firstname;
