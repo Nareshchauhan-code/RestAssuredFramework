@@ -1,7 +1,7 @@
 package ProjectLombok;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 
 public class ProjectLombok {
@@ -17,7 +17,7 @@ public class ProjectLombok {
 
         RestAssured.given()
                 .baseUri("https://run.mocky.io/v3/568b7d78-03bc-4b5d-99ec-4b215b5e093d")
-                .get()
+                .post(String.valueOf(bookingpojo))
                 .prettyPrint();
 
     }
