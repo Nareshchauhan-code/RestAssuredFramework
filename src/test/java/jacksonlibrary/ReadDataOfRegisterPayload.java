@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.IOException;
 
-public class RegisterDataReadfromPayload {
+public class ReadDataOfRegisterPayload {
 
     @Test
     public void registerDataReadFromPayload() throws IOException {
