@@ -9,7 +9,7 @@ public class BuilderAnnotationOfProjectLombok {
     @Test
     public void builderAnnotationOfProjectLombok() throws JsonProcessingException {
 
-        EmployeeDataforLombok employeeDataforLombok = EmployeeDataforLombok.builder().fristName("Sonu").lastName("CHauhan")
+        EmployeeDataforLombok employeeDataforLombok = EmployeeDataforLombok.builder().fristName("Sonu").lastName("Chauhan")
                 .age(32).gender("Female").build();
 
         ObjectMapper objectMapper = new ObjectMapper();
