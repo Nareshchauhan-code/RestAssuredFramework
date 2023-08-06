@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
+
 public class GetMethod {
     @Test
     public void getMethod() {
@@ -27,6 +28,7 @@ public class GetMethod {
         ValidatableResponse validatableResponse = response.then();
         validatableResponse.statusCode(200);
         validatableResponse.extract().response().prettyPrint();
+        validatableResponse.header("Content-Type", equalTo("application/json"));
         validatableResponse.body("[0].jobId", equalTo(1));
         validatableResponse.body("[0].jobTitle", equalTo("Software Engg"));
 
@@ -44,6 +46,7 @@ public class GetMethod {
                 .then()
                 .log().all()
                 .statusCode(200)
+                .header("Content-Type", equalTo("application/json"))
                 .body("[0].jobId", equalTo(1))
                 .body("[0].jobTitle", equalTo("Software Engg"))
                 .extract()
