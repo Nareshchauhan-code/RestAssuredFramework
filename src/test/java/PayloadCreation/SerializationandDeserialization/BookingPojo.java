@@ -1,4 +1,4 @@
-package SerializationandDeserialization;
+package PayloadCreation.SerializationandDeserialization;
 
 public class BookingPojo {
 

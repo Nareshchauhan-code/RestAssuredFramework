@@ -1,4 +1,4 @@
-package SerializationandDeserialization;
+package PayloadCreation.SerializationandDeserialization;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -49,6 +49,7 @@ public class SerializationandDeserialization {
         System.out.println(afterDe.getFirstname());
 
         Assert.assertEquals(afterDe.getFirstname(), "Naresh");
+        Assert.assertEquals(afterDe.getLastname(),"Chauhan");
 
 
     }
